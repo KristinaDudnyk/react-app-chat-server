@@ -1,10 +1,9 @@
 import React from "react";
 
-export default function Headers() {
+export default function Header() {
   return (
-    <div>
+    <div className="header-container">
       <h1>CYF Chat</h1>
-      <h2>Send a message</h2>
     </div>
   );
 }
