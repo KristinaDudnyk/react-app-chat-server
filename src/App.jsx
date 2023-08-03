@@ -1,13 +1,16 @@
 import Header from "./Header";
 import Form from "./Form";
-import GetAllMessages from "./GetAllMessages";
+import Messages from "./Messages";
+import { useState } from "react";
 
 function App() {
+  const [refreshMessages, setRefreshMessages] = useState(false);
+
   return (
     <div className="App">
       <Header />
-      <Form />
-      <GetAllMessages />
+      <Form setRefreshMessages={setRefreshMessages} />
+      <Messages refreshMessages={refreshMessages} />
     </div>
   );
 }
